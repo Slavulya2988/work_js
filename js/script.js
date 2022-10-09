@@ -12,7 +12,7 @@ P.S. Функции вызывать не обязательно */
 let numberOfFilms;
 
 function start(){
-	numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?','');
+	numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?','').trim();
 
 	while(numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms) ){
 		numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?','');
@@ -44,7 +44,7 @@ function rememberMyFilms(){
 	}
 }
 
-// rememberMyFilms();
+rememberMyFilms();
 
 function detectPersonalLevel() {
 	if( personalMovieDB.count < 10){
